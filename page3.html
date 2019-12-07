@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .slide{
+        width:210px;
+        border: 2px solid #333;
+        box-shadow:2px 2px 3px #000;
+        float: left;
+        margin-top:30px;
+        margin-right:20px;
+      }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#l1").click(function(){
+        $("#l1").css("background","yellow").css("fontWeight","bold");
+        $("#l2").css("background","white").css("fontWeight","normal");
+        $("#l3").css("background","white").css("fontWeight","normal");
+      });
+      $("#l2").click(function(){
+        $("#l2").css("background","yellow").css("fontWeight","bold");
+        $("#l1").css("background","white").css("fontWeight","normal");
+        $("#l3").css("background","white").css("fontWeight","normal");
+      });
+      $("#l3").click(function(){
+        $("#l3").css("background","yellow").css("fontWeight","bold");
+        $("#l1").css("background","white").css("fontWeight","normal");
+        $("#l2").css("background","white").css("fontWeight","normal");
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <h1>사이트 설명</h1>
+    <ul>
+      <li id="l1">옷 판매</li>
+      <li id="l2">모델 모집</li>
+      <li id="l3">스타일리스트 취업</li>
+    </ul>
+  </body>
+</html>

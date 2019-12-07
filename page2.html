@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    .bigPic{
+      position:absolute;
+      display:none;
+      left:100px;
+      width:400px;
+      height:340px;
+    }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+        $("#big1").fadeIn(1000);
+      });
+      $("#btn2").click(function(){
+        alert("품절");
+      });
+      $("#big1").click(function(){
+        $(this).fadeOut(1000);
+      });
+    });
+
+    </script>
+  </head>
+  <body>
+      <img src="clo1.jpg" id="clo1" width="200" height="140">
+      <img src="clo1.jpg" id="big1" class="bigPic" width="300" height="210">
+    <p>청자켓 - 39,000원</p>
+    <input type="button" value="크게보기" id="btn1">
+    <input type="button" value="구매하기" id="btn2">
+  </body>
+</html>
